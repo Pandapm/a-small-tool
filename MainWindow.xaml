@@ -1,0 +1,39 @@
+﻿<Window x:Class="用户名助记.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="私人小工具-用户名" Height="323" Width="454" ResizeMode="NoResize"   WindowStartupLocation="CenterScreen">
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
+        <Grid Margin="31,19,30,6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="116*"></ColumnDefinition>
+                <ColumnDefinition Width="28*"></ColumnDefinition>
+                <ColumnDefinition Width="115*"></ColumnDefinition>
+                <ColumnDefinition Width="28*"></ColumnDefinition>
+                <ColumnDefinition Width="110*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="118*"></RowDefinition>
+                <RowDefinition Height="22"></RowDefinition>
+                <RowDefinition Height="106*"></RowDefinition>
+                <RowDefinition Height="23*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Button Grid.Column="2" Click="Button_Click_1" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" BorderBrush="#00707070">
+                <Image Source="G:\\奇怪的尝试\\用户名助记\\FileIn.png" Height="64" Width="72"/>
+
+            </Button>
+            <TextBox Grid.ColumnSpan="3" VerticalAlignment="Center" x:Name="txtSite" Grid.Row="2" Margin="-1,38,35,28" FontSize="30" BorderBrush="#4CABADB3" Height="40"/>
+            <Button x:Name="btn_Search" Grid.Row="2"   Grid.Column="3"  Grid.ColumnSpan="2"  Click="btn_Search_Click" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" BorderBrush="#00707070" Margin="1,0,0,0"   >
+                <Image Source="G:\\奇怪的尝试\\用户名助记\\Search.png" Height="64" Width="72"/>
+            </Button>
+            <Button x:Name="btn_Add" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" BorderBrush="#00707070" Click="btn_Add_Click">
+                <Image Source="G:\\奇怪的尝试\\用户名助记\\Add.png" Height="64" Width="72"/>
+            </Button>
+            <TextBlock Text="Made By PM"  Grid.Row="3" Grid.Column="4" HorizontalAlignment="Right" Width="73" Margin="0,8,3,-8"></TextBlock>
+            <Button x:Name="btn_updata" Grid.Column="4" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" BorderBrush="#00F0F0F0" Click="btn_updata_Click" >
+                <Image Source="G:\\奇怪的尝试\\用户名助记\\update.png" Height="64" Width="72"/>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

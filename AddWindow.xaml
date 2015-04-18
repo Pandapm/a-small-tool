@@ -1,0 +1,32 @@
+﻿<Window x:Class="用户名助记.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddWindow" Height="311" Width="371.538" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Margin="0,0,1,-9">
+        <Grid Margin="38,22,23,0" Height="226" VerticalAlignment="Top" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="89*"></ColumnDefinition>
+                <ColumnDefinition Width="216*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock  FontSize="18" HorizontalAlignment="Left" Height="33"  TextWrapping="Wrap" Text="地点" VerticalAlignment="Top" Width="61" Margin="0,5,0,0"/>
+            <TextBlock Grid.Row="1" FontSize="18" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" Text="用户名" VerticalAlignment="Top" Width="57" Margin="0,5,0,0"/>
+            <TextBlock Grid.Row="2"  FontSize="18" HorizontalAlignment="Left" Height="34"  TextWrapping="Wrap" Text="密码" VerticalAlignment="Top" Width="57" Margin="0,5,0,0" />
+            <TextBlock  FontSize="18"  HorizontalAlignment="Left" Height="32"   Grid.Row="3" TextWrapping="Wrap" Text="备注" VerticalAlignment="Top" Width="109" Grid.ColumnSpan="2" Margin="0,5,0,0"/>
+
+            <TextBox x:Name="txtAddSite"  Grid.Column="1"  FontSize="18" HorizontalAlignment="Left" Height="40"   TextWrapping="Wrap" VerticalAlignment="Top" Width="180" BorderBrush="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"  />
+            <TextBox x:Name="txtAddName" Grid.Column="1" Grid.Row="1"  FontSize="18" HorizontalAlignment="Left" Height="40"   TextWrapping="Wrap" VerticalAlignment="Top" Width="180" BorderBrush="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+            <PasswordBox x:Name="pwAddPassword" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="40"   VerticalAlignment="Top" Width="180" BorderBrush="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" />
+
+            <TextBox    x:Name="txtAddOther"  Grid.Column="1" Grid.Row="3"  FontSize="18" HorizontalAlignment="Left" Height="40"   TextWrapping="Wrap" Text="  " VerticalAlignment="Top" Width="180" BorderBrush="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" />
+            <Button   x:Name="btn_Add"  Grid.Row="4" Grid.ColumnSpan="2" FontSize="25"  Content="添加" HorizontalAlignment="Left" Height="45"   VerticalAlignment="Top" Width="283" Click="btn_Add_Click" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Margin="0,10,0,-10"  />
+        </Grid>
+
+    </Grid>
+</Window>
