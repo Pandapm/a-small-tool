@@ -8,19 +8,19 @@ namespace 用户名助记
 {
     class Info
     {
-        public  string info_site
+        public  string infoSite
         {
             get;
             set;
          }
-        public string info_name
+        public string infoName
         {
             get;
             set;
         }
         public override string ToString()
         {
-            return info_site + ": " + info_name;
+            return string.Format("{0}: {1}", infoSite, infoName);
         }
     }
 }

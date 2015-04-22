@@ -13,5 +13,6 @@ namespace 用户名助记
     /// </summary>
     public partial class App : Application
     {
+        public static const string dbStr = ConfigurationManager.ConnectionStrings["dbCS"].ConnectionString;
     }
 }
