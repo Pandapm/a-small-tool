@@ -22,16 +22,16 @@ namespace 用户名助记
     /// </summary>
     public partial class UpdataWindow : Window
     {
+        private List<Info> list;
         public UpdataWindow()
         {
+            list = new List<Info>();
             InitializeComponent();
         }
 
         private void btn_Search_Click(object sender, RoutedEventArgs e)
         {
-            List<Info> list = new List<Info>();
-            string dbStr = ConfigurationManager.ConnectionStrings["dbCS"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(dbStr))
+            using (SqlConnection conn = new SqlConnection(App.dbStr))
             {
                 conn.Open();
                 using (SqlCommand cmd = conn.CreateCommand())
@@ -55,7 +55,7 @@ namespace 用户名助记
                         {
                             string dbusername = (string)row["User_Name"];
                             string dbsite = (string)row["Site"];
-                            list.Add(new Info() { info_name=dbusername,info_site=dbsite});
+                            list.Add(new Info() { infoName = dbusername, infoSite = dbsite });
                         }
                     }
                     lbData.ItemsSource = list;
@@ -73,14 +73,14 @@ namespace 用户名助记
             using (SqlConnection conn = new SqlConnection(dbStr))
             {
                 conn.Open();
-                using (SqlCommand cmd=conn.CreateCommand())
+                using (SqlCommand cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = "update T_UserNameAndPassword set User_Password=@New where Site=@upSite and User_Name=@upName";
                     cmd.Parameters.Add(new SqlParameter("@New", newpw));
-                    cmd.Parameters.Add(new SqlParameter("@upSite", info.info_site));
-                    cmd.Parameters.Add(new SqlParameter("@upName", info.info_name));
-                    cmd.ExecuteNonQuery(); 
-                    
+                    cmd.Parameters.Add(new SqlParameter("@upSite", info.infoSite));
+                    cmd.Parameters.Add(new SqlParameter("@upName", info.infoName));
+                    cmd.ExecuteNonQuery();
+
                     MessageBox.Show("修改成功~");
                 }
             }
